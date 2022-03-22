@@ -1,0 +1,14 @@
+<form action="/index.html" method="POST" >
+    {{ form.csrf_token }}
+    {{ form.hashtag.label }}
+    {{ form.hashtag }}
+    {{ form.noft.label }}
+    {{ form.noft }}
+    {{ form.lng.label }}
+    {{ form.lng }}
+    {{ form.submit }}
+</form>
+{% if hashtag %}
+    <h1>{{ form.hashtag.label }}</h1>
+    <p>{{ form.hashtag.data }}</p>
+{% endif %}
