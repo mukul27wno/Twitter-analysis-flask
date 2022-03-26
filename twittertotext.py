@@ -5,7 +5,6 @@ import tweepy
 from textblob import TextBlob
 from wordcloud import WordCloud
 import pandas as pd
-import numpy as np
 import re
 import matplotlib.pyplot as plt
 plt.style.use('fivethirtyeight')
@@ -15,6 +14,8 @@ ckey = log['key'][0]
 cskey = log['key'][1]
 at = log['key'][2]
 ats = log['key'][3]
+
+forms = forms.AddTaskForm()
 
 auth = tweepy.OAuthHandler(ckey, cskey)
 auth.set_access_token(at, ats)
@@ -31,8 +32,12 @@ posts = api.user_timeline(screen_name=hashtag, count=noft, lang=lang, tweet_mode
 #     print(str(i) +') '+ tweet.full_text + '\n')
 #     i = i+1
 
-df = pd.DataFrame([tweet.full_text for tweet in posts], columns=['Tweets'])
+# df = pd.DataFrame([tweet.full_text for tweet in posts], columns=['Tweets'])
 # df.head()
+
+# in search query we can add state name as well for the specified state result
+# add all tweet text do text cleaning polarity wordCloud Subjectivity 
+
 
 def cleantxt(text):
     text = re.sub('@[A-Za-z0-9]+','',text) # remove @mentions
@@ -106,4 +111,3 @@ df['Analysis'].value_counts()
 # plt.ylabel("Counts")
 # df['Analysis'].value_counts().plot(kind='bar')
 # plt.show() 
-
