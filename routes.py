@@ -12,6 +12,8 @@ import forms
 
 @app.route('/',methods=['GET','POST'])
 @app.route('/index.html', methods=['GET','POST'])
+
+
 def index():
 
     log = pd.read_excel("login_twitter_api.xlsx")
@@ -22,7 +24,7 @@ def index():
     ats = key[3]
 
     form = forms.AddTaskForm()
-    print("Submitted title 1 ",form.hashtag.data)
+    # print("Submitted title 1 ",form.hashtag.data)
     if form.validate_on_submit():
         full_filename = os.path.join(app.config['UPLOAD_FOLDER'], 'wordcloud.png')
         auth = tweepy.OAuthHandler(ckey, cskey)

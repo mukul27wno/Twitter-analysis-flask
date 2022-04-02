@@ -7,4 +7,3 @@ class AddTaskForm(FlaskForm):
     noft = StringField('noft', validators=[DataRequired()])
     lng = StringField('lng', validators=[DataRequired()])
     submit = SubmitField('Submit')
-
