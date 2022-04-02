@@ -40,10 +40,6 @@ posts = api.user_timeline(screen_name=hashtag, count=noft, lang=lang, tweet_mode
 
 
 def cleantxt(text):
-    text = re.sub('@[A-Za-z0-9]+','',text) # remove @mentions
-    text = re.sub(r'#', '',text) #remove the '#' symbol
-    text = re.sub(r'RT[\s]','',text) #remove RT
-    text = re.sub(r'https?:\/\/\S+','',text)# remove link
     return text 
 
 df['Tweets']=df['Tweets'].apply(cleantxt)

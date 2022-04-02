@@ -1,7 +1,11 @@
 from flask import Flask 
+import os
+
+PEOPLE_FOLDER = os.path.join('Twitter-analysis-flask', 'images')
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'secret-key'
+app.config['UPLOAD_FOLDER'] = PEOPLE_FOLDER
 
 from routes import * 
 
