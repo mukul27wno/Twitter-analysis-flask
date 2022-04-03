@@ -3,7 +3,7 @@ from wtforms import StringField, SubmitField
 from wtforms.validators import DataRequired 
 
 class AddTaskForm(FlaskForm):
-    hashtag = StringField('hashtag', validators=[DataRequired()])
-    noft = StringField('noft', validators=[DataRequired()])
-    lng = StringField('lng', validators=[DataRequired()])
+    hashtag = StringField('Query - ', validators=[DataRequired()])
+    noft = StringField('Number of Tweets - ', validators=[DataRequired()])
+    lng = StringField('Language - ', validators=[DataRequired()])
     submit = SubmitField('Submit')

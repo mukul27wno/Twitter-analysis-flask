@@ -25,8 +25,18 @@
     <p>{{ text }}</p>
     <br>
     <br>
-    {{ Pol }}
-    {{ Sub }}
+    POSITIVE SCORE - {{ Pol }} <br>
+    NEGATIVE SCORE - {{ Sub }} <br>
+    STATUS - {{status}}<br>
+    AVG SENTENCE LENGTH	- {{asl}}<br>
+    PERCENTAGE OF COMPLEX WORDS	- {{pcw}}<br>
+    FOG INDEX	- {{fi}}<br>
+    AVG NUMBER OF WORDS PER SENTENCE	- {{anws}}<br>
+    COMPLEX WORD COUNT	- {{ccw}}<br>
+    WORD COUNT	- {{tnw}}<br>
+    SYLLABLE PER WORD	- {{scw}}<br>
+    PERSONAL PRONOUNS	- {{pronouns}}<br>
+    AVG WORD LENGTH     - {{awl}}<br>
 <img src="{{ loc }}" alt="Word Cloud">
 {% endif %}
 </body>
