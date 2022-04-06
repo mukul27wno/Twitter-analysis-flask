@@ -1,9 +1,0 @@
-Flask==0.10.1
-flask_wtf==
-wtforms==
-tweepy==
-textblob==
-wordcloud==
-pandas==
-nltk==
-cleantext==
